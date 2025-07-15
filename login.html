@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .toggle-form {
+            display: none;
+        }
+
+        .register-toggle {
+            color: #333;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .register-toggle:hover {
+            color: #555;
+        }
+
+        /* Style the registration form when it's displayed */
+        .show-register .register-toggle {
+            display: none;
+        }
+
+        .show-register .toggle-form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="login-form" class="show-login">
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <span class="register-toggle">Register</span></p>
+        </form>
+        <form id="register-form" class="toggle-form">
+            <div class="form-group">
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" name="register-name" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="register-email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="register-password" required>
+            </div>
+            <button type="submit">Register</button>
+            <p>Already have an account? <span class="register-toggle">Login</span></p>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const registerForm = document.getElementById("register-form");
+        const toggleButtons = document.querySelectorAll(".register-toggle");
+
+        toggleButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                loginForm.classList.toggle("show-login");
+                registerForm.classList.toggle("show-register");
+            });
+        });
+    </script>
+</body>
+</html>

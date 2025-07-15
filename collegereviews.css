@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #1b1919;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+nav a:hover{
+    background: rgb(83, 83, 83);
+    color: #007BFF;
+    transition: transform 0.2s ease;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* College List Styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.college-list h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #007BFF;
+    
+}
+
+.college-list article {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.college-list h2 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.college-list h2 a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.college-list p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+
+/* Add hover effect for articles */
+.college-list article:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    
+}
+
+/* Add a border to the articles on hover */
+.college-list article:hover {
+    border: 1px solid #007BFF;
+    
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;    
+}
+
+
+/* Adjust spacing for mobile devices */
+@media screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    .college-list article {
+        padding: 15px;
+    }
+}
